@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
 const Nav = () => {
+  const StyleLink = {
+    color: 'inherit',
+    textDecoration: 'none',
+  };
   return (
     <>
           <nav>
@@ -10,16 +15,14 @@ const Nav = () => {
             </label>
             <div className="nav-container">
               <ul className="nav-tabs">
-                <li className="nav-tab">Movies</li>
-                <li className="nav-tab">Tv Series</li>
-                <li className="nav-tab">Actor/Actres</li>
-                <li className="nav-tab">FAQ</li>
-                <li className="nav-tab">Contact</li>
-                <li className="nav-tab">Careers</li>
+                <li className="nav-tab">
+                <Link style={StyleLink} to="/movies">Movies</Link></li>
+                <li className="nav-tab"> <Link style={StyleLink} to="/series">TV Series</Link></li>
+                <li className="nav-tab"> <Link style={StyleLink} to="/actor">Actress/Actor</Link></li>
+                
               </ul>
             </div>
           </nav>
-       
     </>
   );
 };
